@@ -8,12 +8,40 @@
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :name%>
+        <div class="name-form">
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :性%>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :family_name, autofocus: true %>
+            </div>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :名%>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :last_name %>
+            </div>
+          </div>
+        </div>
+        <div class="name-form">
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :セイ（全角カナ）%>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :family_name_kana %>
+            </div>
+          </div>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :メイ（全角カナ）%>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :last_name_kana %>
+            </div>
           </div>
         </div>
         <div class='field'>
