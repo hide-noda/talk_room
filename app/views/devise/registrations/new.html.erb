@@ -1,47 +1,76 @@
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
-      <h2>Create Account</h2>
-      <h5>新規アカウントの作成</h5>
+      <h2>ユーザー新規登録</h2>
+      <h4>新規アカウントの作成</h4>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :name%>
+      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
+        <%= devise_error_messages! %>
+        
+        <div class="name-form">
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :姓 %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :family_name, autofocus: true %>
+            </div>
           </div>
-          <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :名 %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :last_name %>
+            </div>
+          </div>
+        </div>
+        <div class="name-form">
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :セイ（全角カナ） %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :family_name_kana %>
+            </div>
+          </div>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :メイ（全角カナ） %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :last_name_kana %>
+            </div>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :email %>
           </div>
           <div class='field-input'>
-            <%= f.email_field :email%>
+            <%= f.email_field :email %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password%>
+            <%= f.label :password %>
             <i>(英数字8文字以上)</i>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+            <%= f.password_field :password, autocomplete: "off" %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password_confirmation%>
+            <%= f.label :password_confirmation（パスワード再確認） %>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
           </div>
         </div>
         <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "Create Account", class: 'btn' %>
         </div>
       </div>
     <% end %>
