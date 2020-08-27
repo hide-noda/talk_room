@@ -1,6 +1,6 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <%= link_to current_user.family_name, edit_user_path(current_user) %>
+    <%= link_to current_user.family_name + current_user.last_name, edit_user_path(current_user) %>
   </div>
   <div class="create-room">
     <a href="#">チャット作成</a>
