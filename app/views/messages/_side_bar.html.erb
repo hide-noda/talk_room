@@ -3,19 +3,16 @@
     <%= link_to current_user.family_name + current_user.last_name, edit_user_path(current_user) %>
   </div>
   <div class="create-room">
-    <a href="#">チャット作成</a>
+    <%= link_to "トークルーム作成", new_room_path %>
   </div>
 </div>
 
 <div class="rooms">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">チャットルーム1</a>
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+      </div>
     </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <a href="#">チャットルーム2</a>
-    </div>
-  </div>
+  <% end %>
 </div>
