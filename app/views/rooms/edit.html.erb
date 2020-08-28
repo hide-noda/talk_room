@@ -13,4 +13,7 @@
       <%= f.submit class: 'chat-room-form__action-btn' %>
     </div>
   <% end %>
+  <div class="chat-room-form__field">
+    <%= link_to "トークルームを削除する", room_path(@room), method: :delete %>
+  </div>
 </div>
