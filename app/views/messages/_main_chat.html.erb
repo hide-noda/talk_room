@@ -1,7 +1,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <%= @room.name %>
+      <%= link_to @room.name, edit_room_path(@room) %>
     </div>
   </div>
   <div class="right-header">
