@@ -8,9 +8,9 @@
 
 .side-bar-header {
   height: 100px;
-  background-color: #dddddd;
+  background-color: #070707;
   padding: 0 20px;
-  border: solid 2px #aaaaaa;
+  border: solid 2px #414141;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,7 @@
 
 .header-name a{
   font-size: 16px;
-  color: #050505;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -27,13 +27,13 @@
 }
 
 .create-room a {
-  border: 1px solid #050505;
-  color: #050505;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   text-decoration: none;
   padding: 14px;
 }
 .rooms {
-  background-color: #eeeeee;
+  background-color: #363535;
   height: calc(100vh - 100px);
   padding: 0 20px;
   border: solid 2px #aaaaaa;
@@ -46,7 +46,7 @@
 
 .room-name a{
   text-decoration: none;
-  color: #050505;
+  color: #ffffff;
 }
 
 .chat {
