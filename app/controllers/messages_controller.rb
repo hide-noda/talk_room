@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
     else
       message.update(checked: true)
     end
-
+    item = Message.find(params[:id])
     render json: { message: item }
   end
 

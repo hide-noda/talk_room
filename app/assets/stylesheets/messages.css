@@ -93,6 +93,10 @@
 
 .message {
   margin: 10px 0;
+  border: 2px solid #7bc0e9;
+  border-bottom: 7px solid #38aef0;
+  border-radius: 10px;
+  width: 500px;
 }
 
 .upper-message {
@@ -158,4 +162,18 @@
 
 .hidden {
   display: none;
+}
+
+div[data-check="true"] {
+  background-color: #c6e4ff;
+}
+
+.already-lead {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  border: solid 2px #c6e4ff;
+  border-radius: 10px;
+  border-bottom: solid 6px #aac5ed;
 }
