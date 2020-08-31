@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:new, :create, :edit, :update, :destroy] do
     resources :messages, only: [:index, :create]
   end
-  
+  get 'messages/:id', to: 'messages#checked'
 end

@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
-    @messages = @room.messages.includes(:user)
+    @messages = @room.messages.includes(:user).order(id: "DESC")
   end
 
   def create
@@ -14,6 +14,17 @@ class MessagesController < ApplicationController
       @messages = @room.messages.includes(:user)
       render :index
     end
+  end
+
+  def checked
+    message = Message.find(params[:id])
+    if message.checked
+      message.update(checked: false)
+    else
+      message.update(checked: true)
+    end
+    item = Message.find(params[:id])
+    render json: { message: item }
   end
 
   private
