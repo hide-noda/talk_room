@@ -8,7 +8,7 @@
 
 .side-bar-header {
   height: 100px;
-  background-color: #070707;
+  background-color: #bbbbbb;
   padding: 0 20px;
   border: solid 2px #414141;
   display: flex;
@@ -31,9 +31,10 @@
   color: #ffffff;
   text-decoration: none;
   padding: 14px;
+  background-color: #363636;
 }
 .rooms {
-  background-color: #363535;
+  background-color: #555555;
   height: calc(100vh - 100px);
   padding: 0 20px;
   border: solid 2px #aaaaaa;
@@ -55,7 +56,7 @@
 
 .chat-header {
   height: 100px;
-  background-color: #888888;
+  background-color: #eeeeee;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -80,7 +81,7 @@
   text-decoration: none;
   color: #eeeeee;
   border: 3px solid rgb(230, 216, 216);
-  background-color: #804040;
+  background-color: #444444;
   padding: 20px;
 }
 
