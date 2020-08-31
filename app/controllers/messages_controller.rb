@@ -16,6 +16,17 @@ class MessagesController < ApplicationController
     end
   end
 
+  def checked
+    message = Message.find(params[:id])
+    if message.checked
+      message.update(checked: false)
+    else
+      message.update(checked: true)
+    end
+
+    render json: { message: item }
+  end
+
   private
 
   def message_params
