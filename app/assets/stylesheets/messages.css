@@ -8,9 +8,9 @@
 
 .side-bar-header {
   height: 100px;
-  background-color: #bbbbbb;
+  background-color: #5b99eb;
   padding: 0 20px;
-  border: solid 2px #414141;
+  border: solid 2px #066cf3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,10 +31,10 @@
   color: #ffffff;
   text-decoration: none;
   padding: 14px;
-  background-color: #363636;
+  background-color: #2267e9;
 }
 .rooms {
-  background-color: #555555;
+  background-color: #a2bfeb;
   height: calc(100vh - 100px);
   padding: 0 20px;
   border: solid 2px #aaaaaa;
@@ -56,7 +56,7 @@
 
 .chat-header {
   height: 100px;
-  background-color: #eeeeee;
+  background-color: #1e77ec;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -81,7 +81,7 @@
   text-decoration: none;
   color: #eeeeee;
   border: 3px solid rgb(230, 216, 216);
-  background-color: #444444;
+  background-color: #2113e4;
   padding: 20px;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .form {
-  background-color: #222222;
+  background-color: #405583;
   height: 90px;
   padding: 20px 40px;
   display: flex;
