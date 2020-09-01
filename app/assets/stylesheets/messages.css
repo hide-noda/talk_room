@@ -97,6 +97,7 @@
   border-bottom: 7px solid #38aef0;
   border-radius: 10px;
   width: 500px;
+  position: relative;
 }
 
 .upper-message {
@@ -176,4 +177,22 @@ div[data-check="true"] {
   border: solid 2px #c6e4ff;
   border-radius: 10px;
   border-bottom: solid 6px #aac5ed;
+}
+
+.delete-btn {
+  width: 50px;
+  height: 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #62879e;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 400px;
+}
+
+.delete-btn a {
+  color: white;
+  text-decoration: none;
 }
