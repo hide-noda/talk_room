@@ -16,6 +16,14 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @room = Room.find(params[:room_id])
+    message = @room.messages.find(params[:id])
+    if message.destroy
+      redirect_to room_messages_path(@room)
+    end
+  end
+
   def checked
     message = Message.find(params[:id])
     if message.checked
