@@ -5,6 +5,7 @@
       <h5>アカウントの編集</h5>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
       <%= link_to "チャットページに戻る", :back, class: 'btn'%>
+      <%= link_to "トーク相手を検索する", new_relationship_path, class: "btn"%>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
@@ -53,7 +54,7 @@
           </div>
         </div>
         <div class='actions'>
-          <%= f.submit "Update", class: 'btn'%>
+          <%= f.submit "更新する", class: 'btn'%>
         </div>
       <% end %>
     </div>
