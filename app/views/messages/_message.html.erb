@@ -13,7 +13,9 @@
     </div>
     <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
   </div>
-  <div class="delete-btn">
-    <%= link_to "削除", room_message_path(@room, message.id), method: :delete %>
-  </div>
+  <% if current_user.id == message.user.id %>
+    <div class="delete-btn">
+      <%= link_to "削除", room_message_path(@room, message.id), method: :delete %>
+    </div>
+  <% end %>
 </div>
