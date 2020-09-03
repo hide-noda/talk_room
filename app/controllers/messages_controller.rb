@@ -26,10 +26,12 @@ class MessagesController < ApplicationController
 
   def checked
     message = Message.find(params[:id])
-    if message.checked
-      message.update(checked: false)
-    else
-      message.update(checked: true)
+    if message.user_id != current_user.id
+      if message.checked
+        message.update(checked: false)
+      else
+        message.update(checked: true)
+      end
     end
     item = Message.find(params[:id])
     render json: { message: item }
