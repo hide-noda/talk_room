@@ -1,0 +1,23 @@
+<div class="relation-create">
+  <h1>トーク相手を探しましょう</h1>
+  <%= form_with model: @relation, local: true do|f| %>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field'>
+        <div class='chat-room-form__field--left'>
+          <label class='chat-room-form__label' for='chat_room_チャットメンバー'>トークメンバー</label>
+        </div>
+        <div class='chat-room-form__field--right'>
+          <%= f.collection_select(:follower_id, User.all.where.not(id: current_user.id), :id, :family_name, prompt: "選択してください")%>
+          <%= f.hidden_field :following_id, value: current_user.id %>
+        </div>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+        <%= link_to "トークルームへ戻る", root_path, class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>

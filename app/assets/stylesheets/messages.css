@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
 }
+
 .side-bar {
   width: 300px;
   height: 100vh;
@@ -10,19 +11,29 @@
   height: 100px;
   background-color: #5b99eb;
   padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.talk-btn {
+  position: absolute;
+  top: 60px;
+  margin-left: 10px;
+}
+
+.header-name {
+  padding-top: 10px;
+
 }
 
 .header-name a{
   font-size: 16px;
   color: #ffffff;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .create-room {
-  font-size: 13px;
+  font-size: 10px;
+  display: flex;
 }
 
 .create-room a {

@@ -3,7 +3,10 @@
     <%= link_to current_user.family_name + current_user.last_name, edit_user_path(current_user) %>
   </div>
   <div class="create-room">
-    <%= link_to "トークルーム作成", new_room_path %>
+    <div class="talk-btn">
+      <%= link_to "トークルーム作成", new_room_path %>
+      <%= link_to "トーク相手を探す", new_relation_path%>
+    </div>
   </div>
 </div>
 
