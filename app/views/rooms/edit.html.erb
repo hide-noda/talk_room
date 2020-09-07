@@ -1,5 +1,5 @@
 <div class='chat-room-form'>
-  <h2>トークルーム名の修正ができます<h2>
+  <h2>トークルーム名の修正または削除ができます<h2>
   <%=form_with model: @room, method: :patch, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
@@ -9,11 +9,13 @@
         <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: '新しいトークルーム名を入力してください'%>
       </div>
     </div>
-    <div class='chat-room-form__field--right'>
-      <%= f.submit class: 'chat-room-form__action-btn' %>
+    <div class="btn-field">
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn' %>
+      </div>
+      <div class="chat-room-form__field">
+        <%= link_to "トークルームを削除する", room_path(@room), method: :delete, class: "room-destroy-btn" %>
+      </div>
     </div>
   <% end %>
-  <div class="chat-room-form__field">
-    <%= link_to "トークルームを削除する", room_path(@room), method: :delete %>
-  </div>
 </div>

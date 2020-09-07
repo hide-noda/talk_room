@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
   has_many :messages
+  has_many :relations
+  has_many :followings, through: :relations
+  has_many :followers, through: :relations
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

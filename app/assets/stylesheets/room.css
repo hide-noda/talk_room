@@ -60,6 +60,20 @@ li {
   border: 0;
   text-decoration: none;
 }
+.room-destroy-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #ec0909;
+  border: 0;
+  text-decoration: none;
+}
+
+.btn-field {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .chat-room-form__field {
   margin-top: 30px;
 }
@@ -126,4 +140,29 @@ select {
 
 .field_with_errors{
   display: contents;
+}
+
+.first {
+  width: calc(100% - 300px);
+}
+
+.first-message {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 50px;
+  font-weight: bold;
+  animation-name: aaa;
+  animation-duration: 3s;
+}
+
+@keyframes aaa {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 }
